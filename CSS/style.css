@@ -1,21 +1,52 @@
-.container {
-        border: 2px solid black;
-        display: flex;
-        flex-basis: 800px;
-        flex-flow: row wrap;
+
+
+* {
+    font-family: Helvetica;
 }
 
+body {
+        display: flex;
+        max-width: 1200px;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-content: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: -2px;
+}
+
+/*Section a*/
 #a {
         display: flex;
         flex-flow: column wrap;
-        justify-content: center;
-        width: 33.33%;
+        width: 400px;
         background-color: #F5B99A;
 }
 
+#a > p {
+        padding: 0 55px;
+}
+
+.contact {
+        display: flex;
+        padding: 0 20px;
+}
+
+.about {
+        display: flex;
+        padding: 0 20px;
+}
+
+.hobbie {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+}
+
 .box {
-        width:90%;
-        min-height:35vh;
+        width: 100%;
         margin: auto;
         display: flex;
         align-items: center;
@@ -23,60 +54,88 @@
 }
 
 .box img {
+        border: 100%;
         display: flex;
-        width: 50%;
-        min-width:80px;
-        max-width: 200px;
+        justify-content: center;
+        align-items: center;
+        max-width: 105px;
         border-radius: 100px;
-        height: auto;
-        margin: auto;
 }
 
-.styles {
+#a > h3 {
         background-color: #27B3A9;
         display: flex;
         justify-content: center;
 }
 
+#list-inline > li {
+        list-style: none;
+        display: inline;
+}
+
+/*Section b*/
 #b {
         display: flex;
-        flex-direction: column;
-        width: 66.67%;
+        flex-flow: column wrap;
+        width: 800px;
+        background-color: white;
+}
+
+header > h1  {
+        margin-bottom: -20px;
+}
+
+span.a {
+        display: inline-block;
+        width: 400px;
+        margin-left: 200px;
+        margin-top: -35px;
+}
+
+span.b {
+        display: block;
+        text-indent: 1.2em;
+}
+
+#b > header, h3, .content, .content-references {
+        padding: 0 60px;
 }
 
 .content {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column nowrap;
         justify-content: space-around;
+        margin-top: -30px;
 }
 
 .content-references {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         justify-content: space-around;
-}
-
-.ed--dates  {
-        display: flex;
-        flex-direction: row;
-        flex: 1 3 40px;
-}
-
-.ed--schools {
-        display: flex;
-        flex-direction: column;
-        flex: 2 3 50px;
+        margin-top: -45px;
 }
 
 .position {
         line-height: 20px;
 }
 
-.ref {
-        display: flex;
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  body {
+    background-color: #F09A9D;
+  }
 }
 
-#list-inline > li {
-        list-style: none;
-        display: inline;
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  body {
+    background-color: #F5CF8E;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body {
+    background-color: #B2D6FF;
+  }
 }
