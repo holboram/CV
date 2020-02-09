@@ -61,11 +61,38 @@ img {
 }
 
 .align--about {
-        word-break: break-all;
         flex: 3;
         display: flex;
         padding: 1.25em 1.25em;
         color: #B0BEC5;
+}
+
+.spread--a {
+        letter-spacing: 0.11em;
+}
+
+.spread--b {
+        letter-spacing: 0.05em;
+}
+
+.spread--c {
+        letter-spacing: 0.07em;
+}
+
+.spread--d {
+        letter-spacing: 0.02em;
+}
+
+.spread--e {
+        letter-spacing: 0.13em;
+}
+
+.spread--f {
+        letter-spacing: 0.10em;
+}
+
+.spread--g {
+        letter-spacing: 0.04em;
 }
 
 .component {
@@ -121,7 +148,8 @@ header {
         flex-basis: 16em;
 }
 
-header > h3{
+span.small--line{
+        display: inline;
         font-size: 1.5em;
 }
 
@@ -129,13 +157,13 @@ header > h2 {
         font-size: 2.5em;
 }
 
-header > hr {
-            position: relative;
-            top: -1%;
-            border: none;
-            height: 0.14em;
-            background: #0077B5;
-            width: 12.5%;
+.small--line > hr {
+        position: relative;
+        top: -1%;
+        border: none;
+        height: 0.14em;
+        background: #0077B5;
+        width: 12.5%;
 }
 
 .front {
