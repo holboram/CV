@@ -3,25 +3,130 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-}
+ }
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 0.899em;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 1em;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: black;
 }
 
-.front {
-        color: #f6b29d;
-        font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-weight:100;
-}
-
-#avatar {
+aside {
+        flex: 1;
+        flex-shrink: 2;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-content: center;
         background-color: #0077B5;
+
 }
 
-.company {
-        font-weight: bold;
+.img--box {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-content: center;
+        padding: 1.25em;
+}
+
+img {
+        width: 60%;
+        height: 60%;
+        border-radius: 50%;
+}
+
+.styles {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.edit {
+        padding: 0.5em 0;
+        background-color: #B0BEC5;
+        color: #0077B5;
+}
+
+.contact {
+        flex: 1;
+        padding: 1.25em 1.25em;
+        color: #B0BEC5;
+}
+
+.align--about {
+        word-break: break-all;
+        flex: 3;
+        display: flex;
+        padding: 1.25em 1.25em;
+        color: #B0BEC5;
+}
+
+.component {
+        font-size: 1.3em;
+}
+
+#list-inline > li {
+        list-style: none;
+        display: inline;
+        padding: 1.25em 1.25em;
+}
+
+.icons {
+        padding: 1.25em 1.25em;
+}
+
+i {
+    text-shadow:2px 4px 6px #424242;
+}
+
+.fa {
+    font-size: 3em;
+}
+.fa-swimmer, .fa-table-tennis, .fa-hiking {
+    font-size: 3em;
+    padding-top: 0.3em;
+
+}
+
+.fa-circle {
+        font-size: 0.7em;
+        color: #0077B5;
+}
+.fa-pen-fancy, .fa-briefcase, .fa-graduation-cap {
+        color:  #0077B5;
+}
+
+
+main {
+        flex: 2;
+        flex-shrink: 1;
+        display: flex;
+        flex-flow: column wrap;
+        padding: 1.25em;
+        background-color: white;
+}
+
+header {
+        flex: 2;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        flex-basis: 16em;
+}
+
+header > h3{
+        font-size: 1.5em;
+}
+
+header > h2 {
+        font-size: 2.5em;
 }
 
 header > hr {
@@ -32,466 +137,54 @@ header > hr {
             background: #0077B5;
             width: 12.5%;
 }
-#education > hr, #experience > hr, #references > hr {
-            position: relative;
-            top: 1%;
-            left: 2.2em;
-            right: 10em;
-            border: none;
-            height: 0.16em;
-            background: #0077B5;
-            width: 87%;
+
+.front {
+        color: #f6b29d;
+        font-family:Helvetica, Helvetica, Arial, sans-serif;
+        font-weight:100;
 }
 
-header {
-        grid-area: h;
+.education {
+        position: relative;
+        top: 1%;
+        border: none;
+        height: 0.16em;
+        background: #0077B5;
 }
 
-header > h3 {
-        font-size: 1.5em;
+.styles--b{
+        display: flex;
 }
 
-header > h2 {
-        font-size: 2.5em;
-}
-
-article#contact {
-        margin-top: -1.5em;
-        line-height: 100%;
-        grid-area: c;
-        background-color: #0077B5;
-        color: #BDBDBD;
-}
-
-.styles {
-        line-height: 180%;
-        text-align: center;
-        background-color: #B0BEC5;
-        color: #0077B5;
-}
-
-article#education {
-        grid-area: e;
-        background-color: white;
-}
-
-.align--content, .alignment, .contact, .content--references, header, .align--about {
-        padding-left: 2.5em;
-        padding-right: 3em;
+.box {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 1.25em 0;
 }
 
 .alignment {
-        padding-top: 1em;
-        color: black;
+        flex: 1;
+        display: flex;
 }
 
-.adding--space {
-        word-spacing: 5em;
+.title--right {
+        flex: 2;
+        display: flex;
+        flex-flow: column wrap;
 }
 
-.align--title {
-        padding-left: 15.8em;
+.title--position {
         font-size: 0.9em;
+        margin: -0.7em 0;
 }
 
-.align--content {
-        margin-top: -0.7em;
-        color: black;
+.title--company {
+        font-weight: bold;
 }
 
-article#experience {
-        grid-area: x;
-        background-color: white;
-}
-
-article#references {
-        grid-area: r;
-        background-color: white;
-}
-
-.content--references {
-        padding-top: 1em;
-        color: black;
-}
-
-footer {
-        grid-area: f;
-        background-color: #0077B5;
-}
-.icon--size {
-        font-size: w3;
-}
-
-#list-inline > li {
-        list-style: none;
-        display: inline;
-}
-
-#list-inline {
-        margin: 0 auto;
-        padding-left: 5.5em;
-        padding-right: 0.5em;
-        padding-bottom: 2em;
-        padding-left: 2.5em;
-}
-
-i {
-    text-shadow:2px 4px 6px #424242;
-}
-
-.fa {
-    font-size: 8em;
-}
-.fa-swimmer, .fa-table-tennis, .fa-hiking {
-    font-size: 3em;
-    padding-top: 0.3em;
-
-}
-
-.fa-circle {
-        font-size: 0.7em;
-}
-/*---------------------------------------------------------------------------------------------------------------------------*/
-
-
-/*-------------------------------------------------------------------------------------------------------------------------*/
-/* Tablet Styles */
-@media only screen and (min-width: 426px)  and (max-width: 960px) {
-        body {
-          font-size: 1em;
-          display: grid;
-          grid-template-columns: 1fr 2fr;
-          grid-template-rows: 17% 1fr 1fr 1fr 1fr;
-          grid-template-areas:
-                "i h"
-                "c e"
-                "f x"
-                "f r"
-        ;
-        }
-
-        img {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 55%;
-                height: 140px;
-                position: relative;
-                top: 15%;
-                margin-bottom: -25em;
-                border-radius: 50%;
-                background-color: #FF8F00;
-        }
-
-        header {
-                background-color: white;
-                margin: auto 0;
-                margin-top: 5.2em;
-        }
-
-        #education > .styles, #experience > .styles, #references > .styles {
-                text-align: left;
-                padding-left: 2.2em;
-                background-color: white;
-                color: black;
-        }
-
-        #arrengement {
-                display: flex;
-                justify-content: start;
-        }
-
-        footer > h3, .align--about {
-                margin-top: -1.5em;
-        }
-
-        .align--about {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding-left: 2.5em;
-                padding-right: 3em;
-                margin-top: 1em;
-                margin-bottom: 16em;
-                color: #BDBDBD;
-        }
-
-        i {
-            color: #0077B5;
-        }
-
-        .fa-pen-fancy, .fa-briefcase, .fa-graduation-cap {
-                font-size: 2em;
-        }
-}
-/*---------------------------------------------------------------------------------------------------------------------------*/
-
-
-/*-------------------------------------------------------------------------------------------------------------------------*/
-/* Desktop Styles */
-@media only screen and (min-width: 961px) {
-        body {
-          max-width: 1100px;
-          margin: 0 auto;
-          font-size: 1em;
-          display: grid;
-          grid-template-columns: 1fr 2fr;
-          grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-          grid-template-areas:
-                "i h"
-                "c e"
-                "f x"
-                "f r"
-        ;
-        }
-
-        img {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 50%;
-                height: 160px;
-                position: relative;
-                top: 16%;
-                margin-bottom: -25em;
-                border-radius: 50%;
-                background-color: #FF8F00;
-        }
-
-        header {
-                margin: auto 0;
-                background-color: white;
-        }
-
-        #education > .styles, #experience > .styles, #references > .styles {
-                text-align: left;
-                padding-left: 2.2em;
-                background-color: white;
-                color: black;
-        }
-
-        #arrengement {
-                display: flex;
-                justify-content: start;
-        }
-
-        footer > h3, .align--about {
-                margin-top: -1.5em;
-        }
-
-        .align--content {
-                padding-left: 17em;
-        }
-
-        .align--about {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding-left: 2.5em;
-                padding-right: 3em;
-                margin-top: 1em;
-                margin-bottom: 16em;
-                color: #BDBDBD;
-        }
-
-        i {
-            color: #0077B5;
-        }
-
-        .fa-pen-fancy, .fa-briefcase, .fa-graduation-cap {
-                font-size: 2em;
-        }
-}
-/*---------------------------------------------------------------------------------------------------------------------------*/
-
-
-/*-------------------------------------------------------------------------------------------------------------------------*/
- /*Mobile Styles*/
-@media only screen and (max-width: 425px) {
-        body {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: 165px 165px 1fr 1fr 1fr 33em;
-          grid-template-areas:
-                "i c "
-                "h c"
-                "e e"
-                "x x"
-                "r r"
-                "f f"
-                "f f"
-       ;
-       }
-
-        img {
-                position: absolute;
-                top: -2%;
-                left: 10%;
-                width: 130px;
-                height: 130px;
-                margin-top: 60px;
-                border-radius: 50%;
-                background-color: #FF8F00;
-        }
-
-        #education > hr, #experience > hr, #references > hr {
-                display: none;
-        }
-
-        header {
-                padding-top: 2.8em;
-                background-color: #0077B5;
-        }
-
-
-        header > h3 {
-                font-size: 1em;
-                text-align: center;
-        }
-
-        header > h2 {
-                font-size: 1.3em;
-                text-align: center;
-        }
-
-        header > hr {
-                    position: relative;
-                    top: -1%;
-                    left: 1em;
-                    border: none;
-                    height: 0.165em;
-                    background: #B0BEC5;
-                    width: 20%;
-        }
-
-        article#contact {
-                line-height: 110%;
-                padding-top: 3em;
-                background-color: #0077B5;
-        }
-
-        article#education {
-                grid-area: e;
-                background-color: #0077B5;
-        }
-
-        .alignment, .contact, .content--references {
-                padding-left: 1em;
-                padding-right: 0.5em;
-        }
-
-        .alignment {
-                color: #BDBDBD;
-        }
-
-        .adding--space {
-                word-spacing: 2em;
-        }
-
-        .align--title {
-                padding-left: 12.4em;
-        }
-
-        .align--content {
-                padding-left: 1em;
-                padding-right: 0.5em;
-                color: #BDBDBD;
-        }
-
-        .company {
-                font-weight: bold;
-        }
-        article#experience {
-                background-color: #0077B5;
-        }
-
-        article#references {
-                background-color: #0077B5;
-        }
-
-        .content--references {
-                color: #BDBDBD;
-        }
-
-        .align--about {
-                word-break: none;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding-left: 1em;
-                padding-right: 0.5em;
-                margin-bottom: -5em;
-                margin-top: 1em;
-                color: #BDBDBD;
-        }
-
-        .hobbies--edits {
-                margin-top: 10em;
-        }
-
-       #list-inline > li {
-               margin: 0 auto;
-       }
-
-       #list-inline {
-               padding-bottom: 2em;
-       }
-
-        .fa-swimmer, .fa-table-tennis, .fa-hiking {
-            font-size: 4em;
-        }
-
-}
-/*---------------------------------------------------------------------------------------------------------------------------*/
-
-
-/*-------------------------------------------------------------------------------------------------------------------------*/
-@media only screen and (max-width: 326px) {
-        .align--title {
-                padding-left: 0em;
-        }
-}
-/*---------------------------------------------------------------------------------------------------------------------------*/
-
-
-/*-------------------------------------------------------------------------------------------------------------------------*/
-@media only screen and (max-width: 265px) {
-        body {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: 165px 165px 1fr 1fr 1fr 33em;
-          grid-template-areas:
-                "i"
-                "h"
-                "c"
-                "e"
-                "x"
-                "r"
-                "f"
-    ;
-  }
-
-        img {
-                position: absolute;
-                top: -2%;
-                left: 10%;
-                width: 7em;
-                height: 7em;
-                margin-top: 5em;
-                border-radius: 50%;
-                background-color: #FF8F00;
-        }
-
-        .contact {
-                display: block;
-                margin-top: 6em;
-        }
-
-        .align--title {
-                padding-left: 0.1em;
-        }
-        #list-inline > li {
-                display: block;
-                margin-left: -2em;
-        }
+.arrengement--references {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: 1.25em 0;
 }
