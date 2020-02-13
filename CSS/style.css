@@ -17,6 +17,7 @@ body {
         background-color: black;
 }
 
+/*Side left*/
 aside {
         flex: 1;
         flex-shrink: 2;
@@ -60,49 +61,28 @@ img {
         color: #B0BEC5;
 }
 
+a {
+        color: #B0BEC5;
+        text-decoration: none;
+}
+
+a:hover, a:active {
+      color: #e1e9ef;
+}
+
 .align--about {
         flex: 3;
         display: flex;
         padding: 1.25em 1.25em;
+        text-align: justify;
         color: #B0BEC5;
 }
 
-.spread--a {
-        letter-spacing: 0.11em;
-}
-
-.spread--b {
-        letter-spacing: 0.05em;
-}
-
-.spread--c {
-        letter-spacing: 0.07em;
-}
-
-.spread--d {
-        letter-spacing: 0.02em;
-}
-
-.spread--e {
-        letter-spacing: 0.13em;
-}
-
-.spread--f {
-        letter-spacing: 0.10em;
-}
-
-.spread--g {
-        letter-spacing: 0.04em;
-}
-
-.component {
-        font-size: 1.3em;
-}
-
-#list-inline > li {
+#list-inline {
         list-style: none;
-        display: inline;
-        padding: 1.25em 1.25em;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
 }
 
 .icons {
@@ -113,24 +93,13 @@ i {
     text-shadow:2px 4px 6px #424242;
 }
 
-.fa {
-    font-size: 3em;
-}
 .fa-swimmer, .fa-table-tennis, .fa-hiking {
     font-size: 3em;
     padding-top: 0.3em;
 
 }
 
-.fa-circle {
-        font-size: 0.7em;
-        color: #0077B5;
-}
-.fa-pen-fancy, .fa-briefcase, .fa-graduation-cap {
-        color:  #0077B5;
-}
-
-
+/*Right Side (Main Side)*/
 main {
         flex: 2;
         flex-shrink: 1;
@@ -138,6 +107,17 @@ main {
         flex-flow: column wrap;
         padding: 1.25em;
         background-color: white;
+}
+
+.fa-circle {
+        position: relative;
+        bottom: -0.1em;
+        font-size: 0.7em;
+        color: #0077B5;
+}
+.fa-pen-fancy, .fa-briefcase, .fa-graduation-cap {
+        font-size: 2em;
+        color:  #0077B5;
 }
 
 header {
@@ -148,8 +128,7 @@ header {
         flex-basis: 16em;
 }
 
-span.small--line{
-        display: inline;
+header > h3{
         font-size: 1.5em;
 }
 
@@ -157,19 +136,19 @@ header > h2 {
         font-size: 2.5em;
 }
 
-.small--line > hr {
-        position: relative;
-        top: -1%;
-        border: none;
-        height: 0.14em;
-        background: #0077B5;
-        width: 12.5%;
+.small--line {
+        text-decoration: underline;
+        text-decoration-color: #0077B5;
 }
 
 .front {
         color: #f6b29d;
         font-family:Helvetica, Helvetica, Arial, sans-serif;
         font-weight:100;
+}
+
+.component {
+        font-size: 1.3em;
 }
 
 .education {
@@ -183,6 +162,11 @@ header > h2 {
 
 .styles--b{
         display: flex;
+}
+
+.component {
+        position: relative;
+        bottom: -0.5em;
 }
 
 .box {
@@ -217,4 +201,58 @@ header > h2 {
         flex-flow: row wrap;
         justify-content: space-between;
         padding: 1.25em 0;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 425px) {
+
+        main {
+                background-color: #0077B5;
+                color: #B0BEC5;
+        }
+
+        .styles--b {
+                justify-content: center;
+        }
+
+        .small--line {
+                text-decoration: underline;
+                text-decoration-color: #0077B5;
+        }
+
+        .component {
+                font-size: 1em;
+        }
+
+        .fa-circle {
+                position: relative;
+                bottom: -0.1em;
+                font-size: 0.7em;
+                color: #B0BEC5;
+        }
+
+        .education{
+                display: none;
+        }
+
+        .small--line {
+                text-decoration-color: #f6b29d;
+        }
+
+        .component {
+                bottom: 0;
+        }
+
+        .fa-pen-fancy, .fa-briefcase, .fa-graduation-cap {
+                font-size: 1.33em;
+                color:  #B0BEC5;
+        }
+
+        .arrengement--references {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: space-between;
+                align-content: center;
+                padding: 1.25em 0;
+        }
 }
